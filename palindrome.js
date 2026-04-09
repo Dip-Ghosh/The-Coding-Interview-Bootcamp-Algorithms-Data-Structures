@@ -1,77 +1,73 @@
 /**
- * 🧩 Problem: Given a string and it will return true if  string is a palindrome
- * or false if it is not. Palindromes are strings that form the same word if it iw reversed.
- * *Do* include spaces and punctualtion in determining if the string is a palindrome
- *
- * Write a function that takes a string as input and returns the true or false based on palindrome logic.
- *
- * 📥 Input:
- *   A string (e.g., "abba")
- *
- * 📤 Output:
- *   Reversed string (e.g., "abba") then it will return true as it is a palindrome
- *
+ * Checks whether a given string is a palindrome.
+ * A palindrome reads the same forward and backward.
+ * Spaces and punctuation are included in the comparison.
  */
 
 /**
- * Solution 1
- * @param str
+ * Solution 1: Without using built-in reverse methods
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ *
+ * @param {string} str
  * @returns {boolean}
  */
-const checkPalindromeWithoutBuildInFunction = (str) => {
-    let reverseStr = '';
+const isPalindromeManual = (str) => {
+    let reversed = '';
 
-    for(char of str) {
-        reverseStr = char + reverseStr;
+    for (const char of str) {
+        reversed = char + reversed;
     }
 
-    return str === reverseStr;
-}
+    return str === reversed;
+};
 
 /**
- * Solution 2
+ * Solution 2: Using built-in methods
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
  *
- * @param str
+ * @param {string} str
  * @returns {boolean}
  */
-const checkPalindromeWithBuildInFunction = (str) => {
-    const reverseStr = str
-        .split('')
-        .reverse()
-        .join('');
-
-    return str === reverseStr;
-}
+const isPalindromeBuiltIn = (str) => {
+    return str === str.split('').reverse().join('');
+};
 
 /**
- * Solution 2
+ * Solution 3: Two-pointer approach (optimal)
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
  *
- * @param str
+ * @param {string} str
  * @returns {boolean}
  */
-const checkPalindrome = (str) => {
-
-    const arr = str.split('');
-
-    for (let i= 0; i< arr.length; i++) {
-        if (arr[i] === arr[arr.length-i -1]) return false;
+const isPalindromeTwoPointer = (str) => {
+    for (let i = 0; i < Math.floor(str.length / 2); i++) {
+        if (str[i] !== str[str.length - i - 1]) {
+            return false;
+        }
     }
-
     return true;
-}
+};
 
-
-const checkPalindrome2 = (str) => {
-    return   str.split('').every((char, i) => {
-          return char === str[str.length-i -1]
-      })
-}
-
-
+/**
+ * Solution 4: Using Array.every()
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ *
+ * @param {string} str
+ * @returns {boolean}
+ */
+const isPalindromeEvery = (str) => {
+    return str.split('').every((char, i) => {
+        return char === str[str.length - i - 1];
+    });
+};
 
 module.exports = {
-    checkPalindromeWithoutBuildInFunction,
-    checkPalindromeWithBuildInFunction,
-    checkPalindrome,
-    checkPalindrome2
+    isPalindromeManual,
+    isPalindromeBuiltIn,
+    isPalindromeTwoPointer,
+    isPalindromeEvery,
 };
