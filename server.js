@@ -20,8 +20,20 @@ const { checkPalindromeWithBuildInFunction,  checkPalindromeWithoutBuildInFuncti
 //reverse int check
 const reverseInt = require('./reverse_int');
 const { reverseIntegerBuiltIn,  reverseIntegerManual, reverseIntegerMath, reverseIntegerReduce, } = reverseInt;
+//
+// console.log(reverseIntegerBuiltIn(-100));
+// console.log(reverseIntegerManual(-100));
+// console.log(reverseIntegerMath(-100));
+// console.log(reverseIntegerReduce(-100));
 
-console.log(reverseIntegerBuiltIn(-100));
-console.log(reverseIntegerManual(-100));
-console.log(reverseIntegerMath(-100));
-console.log(reverseIntegerReduce(-100));
+//Max character
+const characterOccuerance = require('./max-char');
+const { maxCharMap,
+    maxCharTwoPass,
+    maxCharReduce,
+    maxCharSort} = characterOccuerance;
+
+console.log(maxCharMap("abcccccccd"));
+console.log(maxCharTwoPass("abcdefghijklmnopqrst"));
+console.log(maxCharReduce("apple 1231111"));
+console.log(maxCharSort("apple 1231111"));

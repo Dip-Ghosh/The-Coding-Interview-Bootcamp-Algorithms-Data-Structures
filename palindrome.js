@@ -6,8 +6,8 @@
 
 /**
  * Solution 1: Without using built-in reverse methods
- * Time Complexity: O(n)
- * Space Complexity: O(n)
+ * @Time Complexity: O(n)
+ * @Space Complexity: O(n)
  *
  * @param {string} str
  * @returns {boolean}

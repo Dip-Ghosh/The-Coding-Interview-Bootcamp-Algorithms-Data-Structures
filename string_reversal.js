@@ -5,14 +5,12 @@
  *
  * 📥 Input:
  *   A string (e.g., "hello")
- *
  * 📤 Output:
  *   Reversed string (e.g., "olleh")
  *
- * 📌 Examples:
- *   reverseString("apple")      → "elppa"
- *   reverseString("hello")      → "olleh"
- *   reverseString("Greetings!") → "!sgniteerG"
+ *  @Examples reverseString("apple")      → "elppa"
+ *  @Examples reverseString("hello")      → "olleh"
+ *  @Examples reverseString("Greetings!") → "!sgniteerG"
  */
 
 /**

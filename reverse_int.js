@@ -1,11 +1,10 @@
 /**
  * Reverses an integer while preserving its sign.
  *
- * Examples:
- * reverseInteger(15) === 51
- * reverseInteger(981) === 189
- * reverseInteger(-1500) === -51
- * reverseInteger(-90) === -9
+ * @Examples reverseInteger(15) === 51
+ * @Examples reverseInteger(981) === 189
+ * @Examples reverseInteger(-1500) === -51
+ * @Examples reverseInteger(-90) === -9
  */
 
 /**
