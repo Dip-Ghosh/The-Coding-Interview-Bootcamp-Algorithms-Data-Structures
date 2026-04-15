@@ -38,7 +38,14 @@ const {maxCharMap, maxCharTwoPass, maxCharReduce, maxCharSort} = characterOccuer
 const fizbuz = require('./fizzbuzz')
 const {fizzBuzzClassic, fizzBuzzString, fizzBuzzArray, fizzBuzzMap} = fizbuz;
 
-fizzBuzzClassic(5);
-fizzBuzzString(10);
-fizzBuzzArray(15);
-fizzBuzzMap(20);
+// fizzBuzzClassic(5);
+// fizzBuzzString(10);
+// fizzBuzzArray(15);
+// fizzBuzzMap(20);
+
+
+const chunkArray = require('./chunk')
+const {solutionChunk1, solutionChunk2} = chunkArray;
+
+console.log(solutionChunk1([1,2,3,4,5,6,7,8],3));
+console.log(solutionChunk2([1,2,3,4,5,6,7,8],3));
